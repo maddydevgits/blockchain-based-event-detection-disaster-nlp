@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.css" type="text/css"> 
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+
+body {
+  background: #76b852; /* fallback for old browsers */
+  background: rgb(141,194,111);
+  background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+.card {
+    top:25%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    width: fit-content;
+}
+.card-text{
+    font-size:19px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.navbar {
+    background-color:#222;
+  border:1px solid grey;
+  z-index: 1;
+ position:absolute;
+  top: 3%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+}
+    </style>
+    </head>
+ 
+        
+
+    <body>
+       
+        <nav class="navbar navbar-expand-sm bg-light">
+            <div class="container-fluid">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/dashboard">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/postmessage">Post Message</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/logout">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        <div class="py-5">
+          <div class="container">
+            {%for i in range(0, len)%}
+                {%if i%2==0 %}
+                    <div class="row hidden-md-up">
+                {%endif%}
+                <div class="col-12 col-sm-6">
+                    <div class="card">
+                        <div class="card-block">
+                            <h4 class="card-title">Message Alert</h4>
+                            <p class="card-text">Posted by {{dashboard_data[i][0][1:-1]}}</h6>
+                            <p class="card-text ">Message: {{dashboard_data[i][1]}}</p>
+                            <a href="#" class="card-link">Tags: {{dashboard_data[i][3]}}</a>
+                            <a href="#" class="card-link">Authorized: {{dashboard_data[i][2]}}</a>
+                        </div>
+                    </div>
+                </div>
+                {%if (i+1)%2==0 %}
+                </div>
+                <br/>
+                {%endif%}
+            {%endfor%}
+            
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
+      </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="{{url_for('static',filename='main.js')}}"> </script>
+  <script src="{{url_for('static',filename='bootstrap.min.js')}}"></script>
+</body>
+  </html>

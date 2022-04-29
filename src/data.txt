@@ -1,0 +1,8 @@
+['0xDA28f04cfaAEa87159a21aa793891E71488Dd1D8', 'hurricanes alert', False, ['related', 'weather_related', 'storm']]
+['0xDA28f04cfaAEa87159a21aa793891E71488Dd1D8', 'fire accidents', False, ['related', 'weather_related', 'fire']]
+['0xDA28f04cfaAEa87159a21aa793891E71488Dd1D8', 'tsunami alert', False, ['related', 'weather_related']]
+['0xDA28f04cfaAEa87159a21aa793891E71488Dd1D8', 'hope you are doing well', False, ['related']]
+['0xEECa4027Cc1dfA37259f2B53CE66404B47EbDE86', 'hurricanes alert', True, ['related', 'weather_related', 'storm']]
+['0xEECa4027Cc1dfA37259f2B53CE66404B47EbDE86', 'fire accidents', True, ['related', 'weather_related', 'fire']]
+['0xDA28f04cfaAEa87159a21aa793891E71488Dd1D8', 'fire accidents', False, ['related', 'weather_related', 'fire']]
+['0xEECa4027Cc1dfA37259f2B53CE66404B47EbDE86', 'hope you are doing well', True, ['related']]
